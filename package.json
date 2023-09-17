@@ -2,6 +2,7 @@
   "name": "todos2.0",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lvar97.github.io/What_I_should_do/",
   "dependencies": {
     "@babel/preset-react": "^7.22.15",
     "@emotion/react": "^11.11.1",
