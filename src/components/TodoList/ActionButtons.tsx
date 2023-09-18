@@ -37,7 +37,7 @@ export const ClearButton: React.FC<ClearButtonProps> = ({ values, onDelete }: Cl
 	<Button
 		sx={{ marginLeft: 'auto' }}
 		onClick={() => {
-			const completedTasks = values?.filter((i: Task) => !i.isDone).map((w: Task) => w.id) ?? [];
+			const completedTasks = values?.filter((i: Task) => i.isDone).map((w: Task) => w.id) ?? [];
 			onDelete(completedTasks);
 		}}
 		disabled={!values?.length || (values && !values.filter((i: Task) => i.isDone).length)}

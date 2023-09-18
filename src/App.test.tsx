@@ -14,20 +14,20 @@ describe('App component', () => {
 		render(<App />);
 
 		// добавляем задачи
-		userEvent.type(screen.getByRole('textbox'), 'Покормить кота');
-		userEvent.type(screen.getByRole('textbox'), 'Полить цветы');
+		userEvent.type(screen.getByRole('textbox'), 'Найти Вила');
+		userEvent.type(screen.getByRole('textbox'), 'Сходить на свидание с 11');
 
 		// проверяем отображение списка и элементов
 		expect(screen.getByRole('list')).toBeInTheDocument();
-		expect(screen.getByText('Покормить кота')).toBeInTheDocument();
-		expect(screen.getByText('Полить цветы')).toBeInTheDocument();
+		expect(screen.getByText('Найти Вила')).toBeInTheDocument();
+		expect(screen.getByText('Сходить на свидание с 11')).toBeInTheDocument();
 	});
 
 	it('toggle task status', () => {
 		render(<App />);
 
 		// добавляем задачу и делаем ее выполненной
-		userEvent.type(screen.getByRole('textbox'), 'Полить цветы');
+		userEvent.type(screen.getByRole('textbox'), 'Сходить на свидание с 11');
 		userEvent.click(screen.getByTestId('toggle-active'));
 	});
 });

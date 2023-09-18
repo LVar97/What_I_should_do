@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 import { Nullable } from '../objects/Options';
 import { WithId } from '../objects/WithId';
 import {
@@ -15,7 +17,18 @@ export interface ListState<TEntity> {
 }
 
 const defaultState = {
-	data: null,
+	data: [
+		{
+			id: v4(),
+			text: 'Find Will',
+			isDone: false,
+		},
+		{
+			id: v4(),
+			text: 'Go on a date with 11',
+			isDone: true,
+		},
+	],
 };
 
 export function listReducer<TEntity extends WithId>(state: ListState<TEntity> | undefined, action: IActionList) {
