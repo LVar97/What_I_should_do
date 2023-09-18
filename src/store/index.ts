@@ -6,8 +6,9 @@ import {
 	AnyAction,
 } from 'redux';
 import thunk, { ThunkDispatch } from 'redux-thunk';
-import { Task } from '../objects/Task';
-import { ListState, getListReducer } from './reducer';
+
+import { Task } from '@app/objects/Task';
+import { ListState, getListReducer } from '@app/store/reducer';
 
 export interface RootStore {
 	todoList: ListState<Task>;

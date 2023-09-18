@@ -1,6 +1,7 @@
 import { Action, ActionCreatorsMapObject, Dispatch } from 'redux';
-import { RootStore } from '.';
-import { WithId } from '../objects/WithId';
+
+import { RootStore } from '@app/store';
+import { WithId } from '@app/objects/WithId';
 
 export enum ActionTypes {
 	ADD = 'ADD',

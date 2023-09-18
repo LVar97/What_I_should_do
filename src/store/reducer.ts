@@ -1,7 +1,13 @@
-import { RootStore } from ".";
-import { Nullable } from "../objects/Options";
-import { WithId } from "../objects/WithId";
-import { ActionAdd, ActionDelete, ActionTypes, ActionUpdate, IActionList } from "./actions";
+import {
+	ActionAdd,
+	ActionDelete,
+	ActionTypes,
+	ActionUpdate,
+	IActionList,
+} from '@app/store/actions';
+import { RootStore } from '@app/store';
+import { Nullable } from '@app/objects/Options';
+import { WithId } from '@app/objects/WithId';
 
 export interface ListState<TEntity> {
 	data: Nullable<Array<TEntity>>;
@@ -19,7 +25,7 @@ export function listReducer<TEntity extends WithId>(state: ListState<TEntity> | 
 	case ActionTypes.ADD: {
 		const { payload }: ActionAdd<TEntity> = action as ActionAdd<TEntity>;
 
-		const result = state?.data ? [payload.data, ...state?.data as Array<TEntity>] : [payload.data]
+		const result = state?.data ? [payload.data, ...state?.data as Array<TEntity>] : [payload.data];
 
 		return {
 			data: result,
@@ -32,7 +38,7 @@ export function listReducer<TEntity extends WithId>(state: ListState<TEntity> | 
 			if (payload.data.id === i.id) return payload.data;
 
 			return i;
-		})
+		});
 
 		return {
 			data: updateValues,
@@ -42,7 +48,7 @@ export function listReducer<TEntity extends WithId>(state: ListState<TEntity> | 
 		const { payload }: ActionDelete<Array<string>> = action as ActionDelete<Array<string>>;
 
 		return {
-			data: state.data?.filter((i: TEntity) => !payload.data.includes(i.id))
+			data: state.data?.filter((i: TEntity) => !payload.data.includes(i.id)),
 		};
 	}
 	default:

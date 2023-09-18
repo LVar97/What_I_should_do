@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import List from '@mui/material/List';
@@ -11,11 +12,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 
-import { Editable } from '../UI/Editable/Editable';
-import { Nullable } from '../../objects/Options';
-import { Task } from '../../objects/Task';
-import { getActionCreators } from '../../store/actions';
-import { useDispatch } from 'react-redux';
+import { Editable } from '@app/components/UI/Editable/Editable';
+import { Nullable } from '@app/objects/Options';
+import { Task } from '@app/objects/Task';
+import { getActionCreators } from '@app/store/actions';
 
 const EditableStyledField = styled(ListItemText, { shouldForwardProp: (prop) => prop !== 'isDone' })<{
 	isDone: boolean,
@@ -37,15 +37,15 @@ export const ListContent: React.FC<ListContentProps> = ({ list }: ListContentPro
 			{list?.map((item: Task) => (
 				<ListItem
 					key={item.id}
-					secondaryAction={
+					secondaryAction={(
 						<IconButton
 							edge="end"
 							aria-label="delete"
 							onClick={() => actions.delete([item.id])}
 						>
-							<DeleteIcon color='error'/>
+							<DeleteIcon color="error" />
 						</IconButton>
-					}
+					)}
 					disablePadding
 				>
 					<ListItemIcon>
@@ -75,6 +75,6 @@ export const ListContent: React.FC<ListContentProps> = ({ list }: ListContentPro
 					</Editable.Container>
 				</ListItem>
 			))}
-		</List>	
+		</List>
 	);
 };
