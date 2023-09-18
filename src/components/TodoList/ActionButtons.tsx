@@ -4,9 +4,9 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 import Button from '@mui/material/Button';
 
-import { FilterType } from '@app/components/TodoList/TodoList';
-import { Nullable } from '@app/objects/Options';
-import { Task } from '@app/objects/Task';
+import { Nullable } from '../../objects/Options';
+import { Task } from '../../objects/Task';
+import { FilterType } from './TodoList';
 
 interface FilterButtonsProps {
 	filterKey: FilterType;

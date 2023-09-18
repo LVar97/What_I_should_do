@@ -11,7 +11,7 @@ module.exports = {
 		'import/resolver': {
 			alias: {
 				map: [
-					['@app', './src'],
+					['./src'],
 				],
 				extensions: ['.js', '.ts', '.tsx'],
 			},
@@ -94,11 +94,6 @@ module.exports = {
 						position: 'after',
 					},
 					{
-						pattern: '@app/**',
-						group: 'internal',
-						position: 'before',
-					},
-					{
 						pattern: '**.(s?)css',
 						group: 'external',
 						position: 'after',
@@ -109,7 +104,6 @@ module.exports = {
 						position: 'after',
 					},
 				],
-				'newlines-between': 'always-and-inside-groups',
 			},
 		],
 

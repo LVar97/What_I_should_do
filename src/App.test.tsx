@@ -5,10 +5,9 @@ import userEvent from '@testing-library/user-event';
 import { v4 } from 'uuid';
 
 import { App } from './App';
-
-import { Task } from '@app/objects/Task';
-import { ActionTypes, IActionList } from '@app/store/actions';
-import { ListState, listReducer } from '@app/store/reducer';
+import { Task } from './objects/Task';
+import { ActionTypes, IActionList } from './store/actions';
+import { ListState, listReducer } from './store/reducer';
 
 describe('App component', () => {
 	it('adding tasks', () => {

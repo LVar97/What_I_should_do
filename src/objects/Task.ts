@@ -1,4 +1,4 @@
-import { WithId } from '@app/objects/WithId';
+import { WithId } from './WithId';
 
 export interface Task extends WithId {
 	text: string;

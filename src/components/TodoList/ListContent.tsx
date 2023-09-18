@@ -12,10 +12,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 
-import { Editable } from '@app/components/UI/Editable/Editable';
-import { Nullable } from '@app/objects/Options';
-import { Task } from '@app/objects/Task';
-import { getActionCreators } from '@app/store/actions';
+import { Editable } from '../UI/Editable/Editable';
+import { Nullable } from '../../objects/Options';
+import { Task } from '../../objects/Task';
+import { getActionCreators } from '../../store/actions';
 
 const EditableStyledField = styled(ListItemText, { shouldForwardProp: (prop) => prop !== 'isDone' })<{
 	isDone: boolean,

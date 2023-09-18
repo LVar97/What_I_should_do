@@ -6,13 +6,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 
-import { RootStore } from '@app/store';
-import { Task } from '@app/objects/Task';
-import { getActionCreators } from '@app/store/actions';
-import { Nullable } from '@app/objects/Options';
-import { ClearButton, FilterButtons } from '@app/components/TodoList/ActionButtons';
-import { NoData } from '@app/components/UI/NoData/NoData';
-import { ListContent } from '@app/components/TodoList/ListContent';
+import { RootStore } from '../../store';
+import { Task } from '../../objects/Task';
+import { getActionCreators } from '../../store/actions';
+import { Nullable } from '../../objects/Options';
+import { NoData } from '../UI/NoData/NoData';
+import { ClearButton, FilterButtons } from './ActionButtons';
+import { ListContent } from './ListContent';
 
 export enum FilterType {
 	ALL = 'all',

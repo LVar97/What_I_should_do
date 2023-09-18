@@ -1,13 +1,13 @@
+import { Nullable } from '../objects/Options';
+import { WithId } from '../objects/WithId';
 import {
 	ActionAdd,
 	ActionDelete,
 	ActionTypes,
 	ActionUpdate,
 	IActionList,
-} from '@app/store/actions';
-import { RootStore } from '@app/store';
-import { Nullable } from '@app/objects/Options';
-import { WithId } from '@app/objects/WithId';
+} from './actions';
+import { RootStore } from '.';
 
 export interface ListState<TEntity> {
 	data: Nullable<Array<TEntity>>;

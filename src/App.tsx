@@ -11,9 +11,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
 import OutlinedInput from '@mui/material/OutlinedInput';
 
-import { TodoList } from '@app/components/TodoList/TodoList';
-import { getActionCreators } from '@app/store/actions';
-import { Task } from '@app/objects/Task';
+import { TodoList } from './components/TodoList/TodoList';
+import { getActionCreators } from './store/actions';
+import { Task } from './objects/Task';
 
 export const App: React.FC = () => {
 	const [task, setTask] = useState<string>('');
